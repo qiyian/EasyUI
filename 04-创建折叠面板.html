@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>手风琴</title>
+	<script src="jquery-3.1.0.js"></script>
+	<script type="text/javascript" src="jquery-easyui/jquery.easyui.min.js" ></script>
+	<link rel="stylesheet" type="text/css" href="jquery-easyui/themes/icon.css"/>
+	<link rel="stylesheet" type="text/css" href="jquery-easyui/demo/demo.css"/>
+	<link rel="stylesheet" type="text/css" href="jquery-easyui/themes/default/easyui.css"/>
+</head>
+<body>
+	<div class="easyui-accordion" style="width:300px;height:200px;">
+		
+		<!--panel1-->
+	    <div title="About Accordion" iconCls="icon-ok" style="overflow:auto;padding:10px;">
+	        <h3 style="color:#0099FF;">Accordion for jQuery</h3>
+	        <p>Accordion is a part of easyui framework for jQuery. It lets you define your accordion component on web page more easily.</p>
+	    </div>
+	    
+	    <!--panel2-->
+	    <div title="About easyui" iconCls="icon-reload" selected="true" style="padding:10px;">
+	        easyui help you build your web page easily
+	    </div>
+	    
+	    
+	    <!--panel3   第三个面板（panel）包含一个树形菜单-->
+	    <div title="Tree Menu">
+	        <ul id="tt1" class="easyui-tree">
+	            <li>
+	                <span>Folder1</span>
+	                <ul>
+	                    <li>
+	                        <span>Sub Folder 1</span>
+	                        <ul>
+	                            <li><span>File 11</span></li>
+	                            <li><span>File 12</span></li>
+	                            <li><span>File 13</span></li>
+	                        </ul>
+	                    </li>
+	                    <li><span>File 2</span></li>
+	                    <li><span>File 3</span></li>
+	                </ul>
+	            </li>
+	            <li><span>File2</span></li>
+	        </ul>
+	    </div>
+	</div>
+
+</body>
+</html>

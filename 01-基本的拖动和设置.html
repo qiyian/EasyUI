@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>基本的拖放和设置</title>
+	<script src="jquery-3.1.0.js"></script>
+	<script type="text/javascript" src="jquery-easyui/jquery.easyui.min.js" ></script>
+	<link rel="stylesheet" type="text/css" href="jquery-easyui/demo/demo.css"/>
+	<link rel="stylesheet" type="text/css" href="jquery-easyui/themes/default/easyui.css"/>
+	<style type="text/css">
+		#dd1{
+			width:100px;
+			height:100px;
+			background: red;
+		}
+		#dd2{
+			width:100px;
+			height:100px;
+			background: green;
+		}
+		#dd3{
+			width:100px;
+			height:100px;
+			background: blue;
+		}
+	</style>
+</head>
+<body>
+	
+	<div id="dd1" class="dd-demo"></div>
+	<div id="dd2" class="dd-demo"></div>
+	<div id="dd3" class="dd-demo"></div>
+
+	<script type="text/javascript">
+	
+		/*通过默认值让其可以拖动*/
+		$('#dd1').draggable();
+		
+		/*通过创建一个克隆（clone）了原来元素的代理（proxy）让其可以拖动。*/
+		$('#dd2').draggable({
+			proxy:'clone'
+		});
+		
+		
+		/*通过创建自定义代理（proxy）让其可以拖动。*/
+		$('#dd3').draggable({
+			proxy:function(source){
+				var p = $('<div class="proxy">proxy</div>');
+				p.appendTo('body');
+				return p;
+			}
+		});
+	</script>
+</body>
+</html>
